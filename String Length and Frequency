@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char name[100],FR,NR;
+    int repeat =0,t,r,z=0;
+    scanf("%s",name);
+    for(int i=0 ; i< strlen(name);i++){
+        if (name[i]==t){
+            continue;
+        }
+        r=repeat;
+        for(int j=i+1;j<strlen(name);j++){
+           if(name[i]==name[j]){
+               repeat+=1;
+               if (repeat ==1){
+                   FR=name[i];
+               }
+            }
+            t=name[i];
+        } 
+        if(repeat==r&&z==0){
+            NR=name[i];
+            z+=1;
+        }
+    }
+    printf("length of the string is: %d\n",strlen(name));
+    printf("Word frequency of the string is: %d\n",strlen(name)-repeat);
+    if (strlen(name)!=strlen(name)-repeat){
+        printf("First repeated character is: %c\n",FR);
+    }
+    else{
+        printf("No repeated character found in the string.");
+    }
+    if (strlen(name)-repeat!=1){
+        printf("First Non-repeated character is: %c\n",NR);
+    }
+    else{
+        printf("No non-repeated character found in the string.");
+    }
+    
+}
