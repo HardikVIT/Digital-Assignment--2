@@ -1,0 +1,26 @@
+# include<stdio.h>
+# include <string.h>
+#include<ctype.h>
+int main(){
+    char string[100];
+    int W=0,V=0,C=0,S=0,Sc=0;
+    fgets(string,100,stdin);
+    for(int i=0;i<strlen(string);i++){
+        if (string[i]== 'a'||string[i]=='u'||string[i]=='e'||string[i]=='i'||string[i]=='o'){
+            V+=1;
+        }
+        if (string[i]!= 'a'&&string[i]!='u'&&string[i]!='e'&&string[i]!='i'&&string[i]!='o'){
+            C+=1;
+        }
+        if(string[i]==' '){
+            S+=1;
+        }
+        if (ispunct(string[i])){
+            Sc+=1;
+        }
+    }
+    printf("Words = %d\n",Sc+1);
+    printf("Vowels = %d\n",V);
+    printf("Consonants = %d\n",C);
+    printf("Space = %d\n",S);
+    printf("Special Characters = %d\n",Sc);
