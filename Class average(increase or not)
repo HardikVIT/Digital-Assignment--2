@@ -1,15 +1,15 @@
 #include <stdio.h>
-int avg(int n[5]);
+int avg(int n[25]);
 int main(){
     int marks[25];
     int month[25];
     int marks2[25];
-    for(int i=0;i<5;i++){
+    for(int i=0;i<25;i++){
         scanf("%d",&marks[i]);
         scanf("%d",&month[i]);
     }
     printf("Class average before : %d\n",avg(marks));
-    for(int i=0;i<5;i++){
+    for(int i=0;i<25;i++){
         marks2[i]=marks[i]+month[i];
     }
     printf("Class average after : %d\n",avg(marks2));
@@ -21,10 +21,10 @@ int main(){
     }
     
 }
-int avg(int n[5]){
+int avg(int n[25]){
     int sum=0;
-    for (int i=0;i<5;i++){
+    for (int i=0;i<25;i++){
         sum+=n[i];
     }
-    return sum/5;
+    return sum/25;
 }
