@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main(){
+    char string[100];
+    int upper=0,lower=0,digit=0,whitespace=0,special=0;
+    fgets(string,100,stdin);
+    for(int i=0;i<strlen(string);i++){
+        if (isupper(string[i])){
+            upper+=1;
+        }
+        if (islower(string[i])){
+            lower+=1;
+        }
+        if (isdigit(string[i])){
+            digit+=1;
+        }
+        if (string[i]==' '){
+            whitespace+=1;
+        }
+        if (ispunct(string[i])){
+            special+=1;
+        }
+    }
+    printf("Number of uppercase : %d\n",upper);
+    printf("Number of lowercase : %d\n",lower);
+    printf("Number of digits : %d\n",digit);
+    printf("Number of whitespace : %d\n",whitespace);
+    printf("Number of special characters : %d\n",special);
+}
