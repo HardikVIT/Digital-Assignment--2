@@ -1,0 +1,24 @@
+#include <stdio.h>
+int fact(int num);
+int sos(int num);
+int main(){
+    int n;
+    scanf("%d",&n);
+    printf("The sum of series is : %d",sos(n));
+}
+int fact(int num){
+    if (num==1){
+        return 1;
+    }
+    else{
+        return num*fact(num-1);
+    }
+}
+int sos(int num){
+    if(num==1){
+        return 1;
+    }
+    else{
+        return (fact(num)/num)+sos(num-1);
+    }
+}
