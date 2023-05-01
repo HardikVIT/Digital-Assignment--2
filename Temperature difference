@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(){
+    int temp[10];
+    for(int i=0;i<7;i++){
+        printf("Day %d temperature in Channai : ",i+1);
+        scanf("%d",&temp[i]);
+    }
+    for(int i=0;i<7;i++){
+        printf("Day %d temperature in Gangtok : %d\n",i+1,(temp[i]+5)-(temp[i]-8));
+    }
+}
