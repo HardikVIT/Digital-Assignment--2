@@ -2,11 +2,11 @@
 int divide(int num,int count);
 int main(){
     int n=15,count=0;
-    int z=divide(n,count);
-    printf("%d",z);
+    divide(n,count);
 }
 int divide(int num,int count){
     if (num==1){
+        printf("Number of times array can be halfed is : %d",count);
         return 0;
     }
     else{
