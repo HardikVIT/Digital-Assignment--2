@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char string[100];
+    fgets(string,100,stdin);
+    int n=0;
+    for (int i=0;i<strlen(string);i++){
+        if (i==0){
+           printf("%c",toupper(string[i])); 
+        }
+        else{
+            if(n==0){
+                printf("%c",tolower(string[i]));
+            }
+        }
+        if(n==1){
+            printf("%c",toupper(string[i]));
+        }
+        if (string[i]==' '){
+            n=1;
+        }
+        
+    }
+    if (strlen(string)<20){
+        printf("The length of string is: %d",strlen(string));
+    }
+    else{
+        printf("%d",100);
+    }
+    
+    
+}
