@@ -1,10 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
 int power(int x,int n);
 int main(){
     int n,x;
     scanf("%d",&x);
     scanf("%d",&n);
-    printf("%d",power(x,n));
+    if(-n!=abs(n)){
+        printf("%d",power(x,n));
+    }
+    else{
+        float z=power(x,abs(n));
+        printf("%f",1/z);
+    }
 }
 int power(int x,int n){
     if(n==0){
