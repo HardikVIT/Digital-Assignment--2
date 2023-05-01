@@ -1,0 +1,38 @@
+#include <stdio.h>
+int intsum(int n);
+int intlen(int n);
+int main() {
+    int num=0;
+  for(int i=1000;i<10000;i++){
+      if (i%2==0){
+          num+=i;
+      }
+  }
+   while(intlen(intsum(num))!=1){
+       num=intsum(num);
+   }
+   if(intsum(num)%2==0){
+       printf("Even found");
+   }
+   else{
+       printf("Odd found");
+   }
+}
+int intsum(int n){
+    int sum=0;
+    int left;
+    while(n!=0){
+        left=n%10;
+        n=n/10;
+        sum+=left;
+    }
+    return sum;
+}
+int intlen(int n){
+    int count=0;
+    while(n!=0){
+        n=n/10;
+        count+=1;
+    }
+    return count;
+}
