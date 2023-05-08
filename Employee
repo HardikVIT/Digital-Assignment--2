@@ -10,7 +10,7 @@ struct office {
 void main() {
    int i, j, n;
    scanf("%d",&n);
-   for (i = 0; i < 3; i++) {
+   for (i = 0; i < n; i++) {
       scanf("%s", e[i].name);
       scanf("%d",& e[i].age);
       scanf("%s", e[i].position);
